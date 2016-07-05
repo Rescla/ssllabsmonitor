@@ -24,7 +24,10 @@ config.domains = args.server || [];
 
 
 var mocha = new Mocha({
-    reporter: 'mocha-junit-reporter'
+    reporter: 'mocha-junit-reporter',
+    reporterOptions: {
+        useFullSuiteTitle: true
+    }
 });
 var testDir = __dirname + '/../lib/tests';
 
