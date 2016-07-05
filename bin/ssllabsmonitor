@@ -23,7 +23,9 @@ var args = parser.parseArgs();
 config.domains = args.server || [];
 
 
-var mocha = new Mocha();
+var mocha = new Mocha({
+    reporter: 'mocha-junit-reporter'
+});
 var testDir = __dirname + '/../lib/tests';
 
 // Add each .js file to the mocha instance
